@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SocialSphere | User Analytics</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">S</span><span>Social<span class="brand-light">Sphere</span></span></div>
+    <p class="nav-label">WORKSPACE</p>
+    <a class="nav active" href="#overview">▦ <span>Overview</span></a>
+    <a class="nav" href="#profiles">♙ <span>User profiles</span></a>
+    <a class="nav" href="#insights">◷ <span>Insights</span></a>
+    <div class="side-note"><div class="note-icon">✦</div><b>Profile intelligence</b><p>Explore audience patterns from your sample dataset.</p></div>
+    <div class="side-footer">BIG DATA ANALYTICS<br><span>Python · MapReduce · CSV</span></div>
+  </aside>
+  <main class="main" id="overview">
+    <header class="topbar"><div><p class="eyebrow">ANALYTICS WORKSPACE</p><h1>Social media overview</h1><p class="sub">Understand your audience at a glance.</p></div><div class="top-right"><span class="live-dot"></span> Dataset connected <span class="avatar">NS</span></div></header>
+    <section class="welcome"><div><p class="eyebrow light">YOUR COMMUNITY, IN FOCUS</p><h2>Every profile tells a story.</h2><p>Explore user locations, interests and follower segments using your project dataset.</p></div><div class="welcome-art"><span>◉</span><i>✦</i><b>↗</b></div></section>
+    <section class="stats" id="stats">
+      <article class="stat-card"><div class="stat-top"><span>Total profiles</span><span class="stat-icon purple">♙</span></div><strong id="totalUsers">—</strong><small>Profiles in dataset</small></article>
+      <article class="stat-card"><div class="stat-top"><span>Locations</span><span class="stat-icon blue">⌖</span></div><strong id="totalLocations">—</strong><small>Unique locations</small></article>
+      <article class="stat-card"><div class="stat-top"><span>Interests</span><span class="stat-icon orange">✳</span></div><strong id="totalInterests">—</strong><small>Interest categories</small></article>
+      <article class="stat-card"><div class="stat-top"><span>Average followers</span><span class="stat-icon green">↗</span></div><strong id="avgFollowers">—</strong><small>Per profile</small></article>
+    </section>
+    <section class="content-grid" id="insights">
+      <article class="panel"><div class="panel-heading"><div><h3>Audience by location</h3><p>Number of profiles in each city</p></div><span class="pill">LOCATION</span></div><div class="chart-wrap"><canvas id="locationChart"></canvas></div></article>
+      <article class="panel"><div class="panel-heading"><div><h3>Top interests</h3><p>What your audience likes</p></div><span class="pill">INTEREST</span></div><div class="chart-wrap"><canvas id="interestChart"></canvas></div></article>
+      <article class="panel wide"><div class="panel-heading"><div><h3>Follower segments</h3><p>Profiles grouped by follower count</p></div><span class="pill">FOLLOWER BAND</span></div><div class="chart-wrap bar-wrap"><canvas id="followerChart"></canvas></div></article>
+    </section>
+    <section class="panel profiles-panel" id="profiles"><div class="panel-heading profile-heading"><div><h3>User profiles</h3><p>Sample records from social_media_profiles.csv</p></div><input id="searchInput" type="search" placeholder="Search username or location..."></div><div class="table-scroll"><table><thead><tr><th>USER</th><th>AGE GROUP</th><th>LOCATION</th><th>INTEREST</th><th>FOLLOWERS</th><th>POSTS</th></tr></thead><tbody id="profileRows"></tbody></table></div><p class="footnote">Demonstration data only · Sample profiles are synthetic.</p></section>
+    <footer>SocialSphere Analytics <span>Built with Python MapReduce · HTML · CSS · JavaScript</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

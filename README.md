@@ -30,6 +30,9 @@ social-media-user-profile-database/
 │   └── social_media_profiles.csv
 ├── output/
 │   └── .gitkeep
+├── dashboard.html
+├── styles.css
+├── app.js
 ├── mapper.py
 ├── reducer.py
 ├── README.md
@@ -68,6 +71,21 @@ Follower bands: `0-499`, `500-999`, `1000-1999`, and `2000+`.
 - Hadoop services running (for a pseudo-distributed setup)
 
 No third-party Python packages are required.
+
+## Run the visual dashboard
+
+The project also includes a browser-based analytics dashboard. It reads the CSV dataset directly and displays profile totals, location and interest charts, follower bands, and a searchable profile table.
+
+From the project root, start Python's built-in web server:
+
+**Windows (PowerShell or Command Prompt):**
+```powershell
+python -m http.server 8000
+```
+
+Then open `http://localhost:8000/dashboard.html` in your browser. Keep the terminal running while you use the dashboard. Press `Ctrl+C` in the terminal to stop the server.
+
+The charts use Chart.js from a CDN, so an internet connection is needed for charts. The profile table and summary calculations use plain JavaScript.
 
 ## Run locally (mapper/reducer logic check)
 
