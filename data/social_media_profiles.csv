@@ -1,0 +1,7 @@
+user_id,username,age_group,location,interest,followers,following,posts
+U101,navya_ds,18-24,Madanapalle,Technology,1200,350,85
+U102,arun_reads,18-24,Bengaluru,Books,450,210,42
+U103,meera_art,18-24,Madanapalle,Art,780,500,63
+U104,rahul_tech,25-34,Hyderabad,Technology,2400,600,120
+U105,sana_travel,18-24,Bengaluru,Travel,950,420,70
+U106,kiran_books,25-34,Hyderabad,Books,300,180,25
